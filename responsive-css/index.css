@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(43, 43, 43);
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+section ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+}
+
+section li {
+  background-color: rgb(120, 168, 73);
+  width: 100%;
+  margin: 0 auto;
+  /* min-width: 100%; */
+  /* margin-left: 10px; */
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+section li div {
+  height: auto;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+section li div p {
+  margin-bottom: 1rem;
+  /* font-size: 1.5rem; */
+  font-weight: 700;
+}
+
+section li div a {
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(114, 114, 203);
+}
