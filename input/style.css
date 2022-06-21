@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  margin-top: 2rem;
+  padding: 0;
+  background-color: rgb(147, 147, 147);
+  font-family: "Gothic A1", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  width: 30rem;
+  padding: 2rem;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+  font: inherit;
+  padding: 0.5rem;
+}
+
+input:focus,
+textarea:focus {
+  background-color: beige;
+}
+
+#btn-box {
+  display: flex;
+  justify-content: right;
+}
+
+button {
+  display: block;
+  margin: 0 0.5rem;
+  font: inherit;
+  padding: 0.5rem 1rem;
+  background-color: blueviolet;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+.radio-box {
+  display: flex;
+}
+
+.radio-box input {
+  width: auto;
+  margin-right: 0.5rem;
+}

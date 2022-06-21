@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>HTML Forms</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <h2>How can we help you?</h2>
+        <label for="userName">Your Name</label>
+        <input type="text" name="user-name" id="userName" />
+
+        <label for="userPassword">Your Password</label>
+        <input type="password" name="user-password" id="userPassword" />
+
+        <label for="userEmail">Your Email</label>
+        <input type="email" name="user-email" id="userEmail" />
+
+        <label for="userAge">Your Age</label>
+        <input type="number" name="user-age" id="userAge" />
+
+        <label for="userBirthdate">Your Birthdate</label>
+        <input type="date" name="user-birthdate" id="userBirthdate" />
+
+        <label for="message">message</label>
+        <textarea id="message"></textarea>
+
+        <hr />
+
+        <label for="color">What doyou like color?</label>
+        <select id="color" name="color">
+          <option>blue</option>
+          <option>red</option>
+          <option>black</option>
+        </select>
+
+        <h3>What do you like?</h3>
+        <div class="radio-box">
+          <input type="radio" id="banana" name="fruit" value="banana" />
+          <label for="banana">banana</label>
+        </div>
+        <div class="radio-box">
+          <input type="radio" id="apple" name="fruit" value="apple" />
+          <label for="apple">apple</label>
+        </div>
+        <div class="radio-box">
+          <input type="radio" id="orange" name="fruit" value="orange" />
+          <label for="orange">orange</label>
+        </div>
+
+        <hr />
+
+        <div class="radio-box">
+          <input type="checkbox" id="agree" />
+          <label for="agree">Agree</label>
+        </div>
+        <div id="btn-box">
+          <button type="submit">save</button>
+          <button type="reset">reset</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
