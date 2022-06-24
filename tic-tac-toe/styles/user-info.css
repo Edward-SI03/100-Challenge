@@ -1,0 +1,30 @@
+#user-info{
+    /* text-align: center; */
+}
+
+#user-info #users{
+    display: flex;
+    justify-content: center;
+    margin: 5% 0 5% 0;
+}
+
+#user-info #user{
+    list-style: none;
+    background-color: aqua;
+    padding: 2rem 4rem 1rem 4rem;
+    border: 1px solid aqua;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 2rem;
+}
+
+#user-icon{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#user-info .btn{
+    display: block;
+    margin: 0 auto;
+    /* text-align: center; */
+}

@@ -5,33 +5,76 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Tic-Tac-Toe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="/tic-tac-toe/styles/style.css" rel="stylesheet" />
+    <link href="/tic-tac-toe/styles/overlays.css" rel="stylesheet">
+    <link href="styles/configuration.css" rel="stylesheet" >
+    <link href="styles/user-info.css" rel="stylesheet" >
+    <link href="styles/play-game.css" rel="stylesheet" >
   </head>
   <body>
-    <header>
+    <div id="backdrop"></div>
+    <header id="main-header">
       <h1>Play Tic, Tac, Toe!</h1>
       <p>Built with HTML, CSS, JavaScript</p>
     </header>
     <main>
-      <section id="infomatoin">
-        <ol>
-          <li>
+      <aside class="modal" id="config-overlay">
+        <h2>Choose your name</h2>
+        <form>
+          <div>
+            <label for="playername">Player name</label>
+            <br>
+            <input type="text" name="username" id="playername" />
+          </div>
+          <div>
+            <button type="button" class="btn btn-alt">Cancle</button>
+            <button type="submit" class="btn">Confirm</button>
+          </div>
+        </form>
+      </aside>
+      <section id="user-info">
+        <ol id="users">
+          <li id="user">
             <article>
               <h2>Player 1</h2>
               <h3>Player Name</h3>
-              <p>X</p>
+              <p id="user-icon">X</p>
+              <button class="btn btn-alt">Edit</button>
             </article>
           </li>
-          <li>
+          <li id="user">
             <article>
               <h2>Player 2</h2>
               <h3>Player Name</h3>
-              <p>O</p>
+              <p id="user-icon">O</p>
+              <button class="btn btn-alt">Edit</button>
             </article>
           </li>
         </ol>
+        <button class="btn">Start New Game</button>
       </section>
-      <section id="play-game"></section>
+      <section id="play-game">
+        <article>
+          <h3>You Win, <span id="winer-name">PlayerName</span>!!!</h3>
+          <p>Click 'Start New Game' above, to start a new game!</p>
+        </article>
+
+        <p>It's your trun<span id="active-player-name">PlayerName</span>!!</p>
+        <ol>
+          <li>X</li>
+          <li>O</li>
+          <li></li>
+          
+          <li></li>
+          <li></li>
+          <li></li>
+          
+          <li></li>
+          <li></li>
+          <li></li>          
+        </ol>
+      </section>
     </main>
   </body>
 </html>

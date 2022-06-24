@@ -1,0 +1,11 @@
+#config-overlay{
+    text-align: center;
+}
+
+#config-overlay h2{
+     margin: 0.5rem;
+}
+
+#config-overlay #playername{
+    margin-bottom: 1rem;
+}
