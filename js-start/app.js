@@ -1,20 +1,17 @@
-let pTag = document.getElementById("click");
+let leng = document.getElementById("length");
+let inp = document.getElementById("input");
 
-// console.log(pTag);
+function check() {
+  let remainText = inp.value.length;
+  leng.innerText = `${60 - remainText}`;
 
-function clickP() {
-  pTag.innerText = "i'm clicked";
-  console.log("clicked");
+  if (remainText > 10) {
+    console.log("hi");
+    // inp.style.backgroundColor = "blue";
+    // inp.style.cssText = "color: white; background-color: black";
+    inp.classList.add("warring");
+    leng.classList.add("warring");
+  }
 }
 
-pTag.addEventListener("click", clickP);
-
-let inputTag = document.getElementById("input");
-
-console.log(inputTag);
-
-function checknum() {
-  console.log(inputTag.value);
-}
-
-inputTag.addEventListener("input", checknum);
+inp.addEventListener("input", check);
