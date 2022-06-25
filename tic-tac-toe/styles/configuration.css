@@ -1,11 +1,30 @@
-#config-overlay{
-    text-align: center;
+#config-overlay {
+  text-align: center;
 }
 
-#config-overlay h2{
-     margin: 0.5rem;
+#config-overlay h2 {
+  margin: 0.5rem;
 }
 
-#config-overlay #playername{
-    margin-bottom: 1rem;
+#config-overlay label {
+  display: block;
+  margin-bottom: 1.3%;
+  font-weight: 700;
+}
+
+#config-overlay #playername {
+  /* margin-bottom: 1rem; */
+  padding: 0.35rem;
+  width: 40%;
+}
+
+#config-overlay .error input {
+  background-color: rgb(249, 203, 203);
+}
+
+#config-overlay button {
+  margin-top: 0.5rem;
+}
+#errorMsg {
+  margin-top: 0.5rem;
 }
