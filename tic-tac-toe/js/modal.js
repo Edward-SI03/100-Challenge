@@ -2,20 +2,26 @@ const edit1 = document.getElementById("user-edit1");
 const edit2 = document.getElementById("user-edit2");
 const modal = document.querySelector(".modal");
 const backdrop = document.getElementById("backdrop");
-let playerId2 = 0;
+let playerId = 0;
+
+const player = [
+  { name: "", icon: "X" },
+  { name: "", icon: "O" },
+];
 
 function edit(e) {
   modal.style.display = "block";
   backdrop.style.display = "block";
-  playerId2 = +e.target.dataset["playerId"];
-  //   playerId2 = userId;
-  console.log(playerId2);
+  playerId = +e.target.dataset["playerId"];
+  // console.log(playerId);
+  inputPlayerName.focus();
+  return playerId;
 }
 
 edit1.addEventListener("click", edit);
 edit2.addEventListener("click", edit);
 
-//
+//모달 띄우기
 
 const cancleBtn = document.getElementById("btn-cancle");
 
@@ -23,49 +29,34 @@ function cancle() {
   modal.style.display = "none";
   backdrop.style.display = "none";
   formElement.firstElementChild.classList.remove("error");
+  inputPlayerName.value = "";
   errorMsg.innerText = "";
 }
 cancleBtn.addEventListener("click", cancle);
 backdrop.addEventListener("click", cancle);
 
-//
+//취소
 
 const inputPlayerName = document.getElementById("playername");
-// const confirmBtn = document.getElementById("btn-confirm");
 const formElement = document.querySelector("form");
 const errorMsg = document.getElementById("errorMsg");
 
-const playerName1 = document.getElementById("username1");
-const playerName2 = document.getElementById("username2");
-
 function newName(event) {
   event.preventDefault();
+  const playerUpdateName = document.getElementById("username" + playerId);
   const formData = new FormData(event.target);
   const formName = formData.get("username").trim();
+  player[playerId - 1].name = formName;
   //   console.log(event.target);
   if (!formName) {
     event.target.firstElementChild.classList.add("error");
     errorMsg.innerText = "Please, Enter your name";
   } else {
-    modal.style.display = "none";
-    backdrop.style.display = "none";
-    inputPlayerName.value = "";
-    errorMsg.innerText = "";
-    event.target.firstElementChild.classList.remove("error");
+    playerUpdateName.innerText = formName;
+    cancle();
   }
-
-  //   playerName1.innerText = inputPlayerName.value;
 }
 
 formElement.addEventListener("submit", newName);
 
-//
-
-const startBtn = document.getElementById("start-btn");
-
-function showGame() {
-  const gameBorld = document.getElementById("play-game");
-  gameBorld.style.display = "block";
-}
-
-startBtn.addEventListener("click", showGame);
+// 이름 바꾸기

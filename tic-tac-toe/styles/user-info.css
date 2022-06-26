@@ -45,3 +45,7 @@
 #start-btn {
   margin-top: 1%;
 }
+
+#new-game-btn {
+  display: none;
+}
