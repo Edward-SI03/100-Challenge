@@ -5,10 +5,10 @@ const newGameBtn = document.getElementById("new-game-btn");
 const gameBoard = document.getElementById("play-game");
 
 function showGame() {
-  // if (player[0].name === "" || player[1].name === "") {
-  //   alert("no");
-  //   return;
-  // }
+  if (player[0].name === "" || player[1].name === "") {
+    alert("no");
+    return;
+  }
   gameBoard.style.display = "block";
   edit1.style.display = "none";
   edit2.style.display = "none";
