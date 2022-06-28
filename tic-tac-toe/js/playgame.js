@@ -6,7 +6,7 @@ const gameBoard = document.getElementById("play-game");
 
 function showGame() {
   if (player[0].name === "" || player[1].name === "") {
-    alert("no");
+    alert("Plase, Edit your name");
     return;
   }
   gameBoard.style.display = "block";
@@ -54,9 +54,11 @@ function selectedField(e) {
   gameField[Q][M] = player[activePlayer].icon;
   checkWin();
   gameRound++;
-  if (gameRound === 9) {
-    notWinner.style.display = "inline-block";
-    alertWin.style.display = "none";
+  if (gameEnd) {
+    if (gameRound === 9) {
+      notWinner.style.display = "inline-block";
+      alertWin.style.display = "none";
+    }
   }
   activedfield();
   playerTrun.innerText = player[activePlayer].name;
@@ -112,11 +114,14 @@ function checkWin() {
 
 const fieldEle = document.querySelector("#game-field");
 
+let gameEnd = true;
+
 function winPlayer(dataWin) {
   gameOver.style.display = "block";
   winner.innerText = dataWin;
   alertWin.style.display = "none";
   fieldEle.classList.add("dontclick");
+  return (gameEnd = false);
 }
 
 const gameField = [
