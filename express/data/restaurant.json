@@ -1,0 +1,23 @@
+[
+  {
+    "name": "testname",
+    "address": "testadsress",
+    "cuisine": "testdish",
+    "website": "http://www.test.com",
+    "description": "testcomment"
+  },
+  {
+    "name": "TESTNAME",
+    "address": "TESTADDRESS",
+    "cuisine": "TESTDISH",
+    "website": "http://test.com",
+    "description": "TESTCOMMENT"
+  },
+  {
+    "name": "리온",
+    "address": "경기도",
+    "cuisine": "한식",
+    "website": "http://www.test.com",
+    "description": "굿"
+  }
+]

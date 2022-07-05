@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("includes/head") %>
+    <link rel="stylesheet" href="styles/restaurants.css" />
+  </head>
+  <body>
+    <!-- includes 라는 폴더를 만들어 중복되는 코드/레이아웃을 만들어 넣어주면 
+      include("includes/파일이름")으로 중복해서 사용할 수 있음
+      이때 %- 를 사용해서 원시코드로 가져온다고 뭐라했음
+
+    -->
+    <%- include("includes/header") %> <%- include("includes/aside") %>
+    <main>
+      <h1>Recommended restaurants</h1>
+      <% if(numberOfRestaurants !== 0) {%>
+      <p>Find your next favorite restaurants with help of our other users!</p>
+      <!-- ejs 엔진을 쓰면 html에 변수를 지정해서 값을 바로 보내줄 수 있음 -->
+      <p>We found <%= numberOfRestaurants %> restaurants</p>
+      <ul id="restaurants-list">
+        <!-- html에서 js 반복문을 쓸 수 있음 -->
+        <% for (const restaurant of restaurants) { %>
+        <!-- 원래는 코드를 바로 써서 반목문을 돌렸는데 레스토랑 리스트를 중복해서 쓸수 있다고 따로 파일을 만들어서 불러오는걸로 바꿈
+        똑같이 include를 사용 하는데 얘도 변수를 지정해서 넣어줄 수 있음
+        앞에 있는 restaurant은 중복파일 안에 코드의 키네임이고
+        뒤에있는 restaurant는 for문의 restaurants 안에서 돌고 있는 상수 임  -->
+        <%- include("includes/restaurants/restaurant-item", {restaurant:
+        restaurant}) %> <% } %>
+      </ul>
+      <% }else{ %>
+      <p>Nope! We don't have ant restaurants</p>
+      <% } %>
+    </main>
+  </body>
+</html>
